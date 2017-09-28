@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KHINCHO</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_upload">Upload</string>
+    <string name="title_activity">Activities</string>
+    <string name="title_profile">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

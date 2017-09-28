@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "307638031819",
+    "firebase_url": "https://khicho-576b8.firebaseio.com",
+    "project_id": "khicho-576b8",
+    "storage_bucket": "khicho-576b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307638031819:android:366eed8772338e10",
+        "android_client_info": {
+          "package_name": "com.example.lenovo.khincho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307638031819-shbpnh15kbt9tskl7dphivfdopul3e29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lenovo.khincho",
+            "certificate_hash": "435aa0ebc6d3ed9c05768ed509a29c666e78f670"
+          }
+        },
+        {
+          "client_id": "307638031819-aem6jhmb10eistinmmkjru7rdvp780vc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC73_asoGGs7czARApcwokR2qGaVXBo54k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307638031819-aem6jhmb10eistinmmkjru7rdvp780vc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
