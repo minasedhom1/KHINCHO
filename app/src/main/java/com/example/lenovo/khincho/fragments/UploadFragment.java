@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.lenovo.khincho.R;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -17,6 +18,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
 import static android.app.Activity.RESULT_OK;
 
 /**
@@ -26,6 +29,9 @@ public class UploadFragment extends Fragment {
 
     private static final int GALLERY_INTENT = 2;
     StorageReference mStorage;
+    Button upload_btn;
+    ImageView attached_image;
+
     public UploadFragment() {
         // Required empty public constructor
     }
@@ -41,7 +47,7 @@ public class UploadFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_upload, container, false);
-        Button upload_btn= (Button) v.findViewById(R.id.upload_btn);
+         upload_btn= (Button) v.findViewById(R.id.upload_btn);
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +56,9 @@ public class UploadFragment extends Fragment {
                 startActivityForResult(intent,GALLERY_INTENT);
             }
         });
+
+        attached_image= (ImageView) v.findViewById(R.id.attached_image);
+
 
         return  v;
     }
@@ -60,7 +69,8 @@ public class UploadFragment extends Fragment {
         if (requestCode==GALLERY_INTENT && resultCode==RESULT_OK)
         {
             Uri uri=data.getData();
-            StorageReference filePath=mStorage.child("photos").child(uri.getLastPathSegment());
+            Picasso.with(getContext()).load(uri).into(attached_image);
+           /* StorageReference filePath=mStorage.child("photo").child(uri.getLastPathSegment());
             filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -73,7 +83,7 @@ public class UploadFragment extends Fragment {
                 public void onFailure(@NonNull Exception e) {
                     Toast.makeText(getContext(),"Upload Error: "+ e.getMessage(),Toast.LENGTH_LONG).show();
                 }
-            });
+            });*/
         }
     }
 }

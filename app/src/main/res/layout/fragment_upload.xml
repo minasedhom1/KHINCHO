@@ -1,15 +1,42 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lenovo.khincho.fragments.UploadFragment">
+    android:orientation="vertical"
+    tools:context="com.example.lenovo.khincho.fragments.UploadFragment"
+    android:paddingTop="20dp">
 
     <!-- TODO: Update blank fragment layout -->
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Upload Image from galllery"
-    android:id="@+id/upload_btn"
-    />
+    <ImageView
+        android:id="@+id/attached_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/img_icon"
+        android:layout_gravity="center_horizontal"
+        />
+    <FrameLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Caption..."
+android:layout_marginRight="50dp"       />
 
-</FrameLayout>
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/attachment_icon" />
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
